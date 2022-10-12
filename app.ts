@@ -6,5 +6,6 @@ function printResult(num: number): void { // void means that this function doesn
   console.log('Result: ' + num);
 }
 
-
 printResult(add(5, 12));
+
+// let someValue: undefined;
