@@ -1,22 +1,10 @@
-// const ADMIN = 0;
-// const READ_ONLY = 1;
-// const AUTHOR = 2;
+function add(n1: number, n2: number): number {
+  return n1 + n2;
+}
 
-enum Role { ADMIN = 'ADMIN', READ_ONLY = 100, AUTHOR = 'AUTHOR' };
+function printResult(num: number): void { // void means that this function doesnt return anything
+  console.log('Result: ' + num);
+}
 
-const person = {
-  name: 'Vlad',
-  age: 30,
-  hobbies: ['Sports', 'Cooking'],
-  role: Role.ADMIN
-};
 
-console.log(person.name);
-
-for (const hobby of person.hobbies) {
-  console.log(hobby.toUpperCase());
-};
-
-if (person.role === Role.AUTHOR) {
-  console.log('is author');
-};
+printResult(add(5, 12));
