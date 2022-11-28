@@ -1,7 +1,11 @@
-function add(n1, n2) {
-    return n1 + n2;
+var userInput; // unknown is the better option in comparison to 'any' because it makes sure you are not allowed to do anything, it provides some limitations.
+var userName;
+userInput = 'Max';
+if (typeof userInput === 'string') {
+    userName = userInput;
 }
-function printResult(num) {
-    console.log('Result: ' + num);
+; // this is how you would define userInput into string.
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
 }
-printResult(add(5, 12));
+generateError('An error occurred!', 500);
