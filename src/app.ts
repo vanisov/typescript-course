@@ -1,5 +1,16 @@
-const button = document.querySelector('button')!;
+const person = {
+  name: "Vlad",
+  age: 18
+};
 
-button.addEventListener('click', () => {
-  console.log('Clicked!');
-});
+const copiedPerson = { ...person};
+
+const add = (...numbers: number[]) => {
+  let result = 0;
+  return numbers.reduce((curResult, curValue)=> {
+    return curResult + curValue;
+  }, 0);
+};
+
+const addedNumbers = add(5, 10, 2, 3.7);
+console.log(addedNumbers);
